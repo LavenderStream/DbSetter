@@ -17,7 +17,10 @@ public class DbSetterAction extends AnAction {
     public void actionPerformed(AnActionEvent e) {
         PsiClass psiClass = getPsiClassFromEvent(e);
 
-        PsiField[] allFields = psiClass.getAllFields();
+        GenerateDialog dialog = new GenerateDialog(psiClass);
+        dialog.show();
+
+     /*    PsiField[] allFields = psiClass.getAllFields();
         PsiField[] fields = new PsiField[allFields.length];
 
         int i = 0;
@@ -29,15 +32,15 @@ public class DbSetterAction extends AnAction {
         }
 
         fields = Arrays.copyOfRange(fields, 0, i);
-        CollectionListModel<PsiField> myFields  = new CollectionListModel<PsiField>(fields);;
+       CollectionListModel<PsiField> myFields  = new CollectionListModel<PsiField>(fields);;
 
-        generateAccessors(psiClass, myFields.getItems());
+        generateAccessors(psiClass, myFields.getItems());*/
 
-       /* dialog.show();
+
 
         if (dialog.isOK()) {
             generateAccessors(psiClass, dialog.getSelectedFields());
-        }*/
+        }
     }
 
 

@@ -28,9 +28,8 @@
 
   <actions>
     <!-- Add your actions here -->
-    <action id="DbSetter.DbSetterAction" class="DbSetterAction" text="DbSetter">
+    <action id="DbSetter.DbSetterAction" class="DbSetterAction" text="DatabindingSetter">
       <add-to-group group-id="GenerateGroup" anchor="first"/>
-      <keyboard-shortcut keymap="$default" first-keystroke="alt B"/>
     </action>
   </actions>
 

@@ -22,7 +22,7 @@ public class GenerateDialog extends DialogWrapper {
 
     protected GenerateDialog(PsiClass psiClass) {
         super(psiClass.getProject());
-        setTitle("Select Fields for Android Accessor Generation");
+        setTitle("Select Fields for DataBinding");
 
         PsiField[] allFields = psiClass.getAllFields();
         PsiField[] fields = new PsiField[allFields.length];
